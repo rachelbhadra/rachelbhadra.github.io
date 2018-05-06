@@ -21,11 +21,12 @@ html {
   height: 325px;
 }
 
-.video {
+.img {
   position: relative;
   text-align: center;
   margin: auto;
   top: 10px;
+  height: 210px;
 }
 
 .title {
