@@ -1,28 +1,28 @@
 $(document).ready(function() {
   let curr = 1;
-  let end = 7;
+  let end = 8;
   display(1);
 
   function display(x) {
-    var projects = $("#stuff").children(); // jQuery Function Number 1
+    var projects = $("#stuff").children(); 
     for (var i = 0; i < end; i++) {
-      $(projects[i]).hide(); // jQuery Function Number 2
+      $(projects[i]).hide(); 
     }
-    $(projects[x-1]).show(); // jQuery Function Number 3
+    $(projects[x-1]).show();
     showDot(x-1); 
   }
 
   function showDot(x) {
-    $(".dot").removeClass("active"); // jQuery Function Number 4
-    $(".dot:eq(" + String(x) +")").addClass("active"); // jQuery Function Number 5
+    $(".dot").removeClass("active"); 
+    $(".dot:eq(" + String(x) +")").addClass("active"); 
   }
 
-  $("#next").click(function() { // jQuery Function Number 6
+  $("#next").click(function() { 
     curr++;
-    if (curr > 7) {
-      $("#next").css("opacity", 0.5); // jQuery Function Number 7
+    if (curr > end) {
+      $("#next").css("opacity", 0.5); 
       $("#prev").css("opacity", 1);
-      curr = 7;
+      curr = end;
     } else {
       $("#next").css("opacity", 1);
       $("#prev").css("opacity", 1);
@@ -96,6 +96,14 @@ $(document).ready(function() {
     $("#prev").css("opacity", 1);
     $("#next").css("opacity", 1);
     curr = 7;
+    display(curr);
+  });
+
+  $(".dot:eq(7)").click(function() {
+    $(this).addClass("active");
+    $("#prev").css("opacity", 1);
+    $("#next").css("opacity", 1);
+    curr = 8;
     display(curr);
   });
 
