@@ -1,6 +1,6 @@
 $(document).ready(function() {
   let curr = 1;
-  let end = 8;
+  let end = 7;
   display(1);
 
   function display(x) {

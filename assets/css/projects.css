@@ -29,6 +29,15 @@ html {
   height: 210px;
 }
 
+.img2 {
+  position: relative;
+  text-align: center;
+  margin: auto;
+  padding: 5px;
+  display: inline-block;
+  top: 10px;
+}
+
 .title {
   margin: 0px;
 }
